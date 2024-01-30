@@ -50,7 +50,7 @@ jobs:
           sudo ssh -i ${{secrets.PRIVATE_SERVER_KEYPAIR_DIR}} ${{secrets.PRIVATE_SERVER_ID}} '
           sudo docker pull ${{secrets.DOCKER_USERNAME}}/${{secrets.DOCKER_IMG_NAME}}:${{ github.sha }}
           sudo docker stop ssg-usms-business-service-server
-          sudo docker run -d --rm --name ssg-usms-business-service-server -p 8080:9000 ${{secrets.DOCKER_USERNAME}}/${{secrets.DOCKER_IMG_NAME}}:${{ github.sha }}
+          sudo docker run -d --rm --name ssg-usms-business-service-server -p 9000:8080 ${{secrets.DOCKER_USERNAME}}/${{secrets.DOCKER_IMG_NAME}}:${{ github.sha }}
           '
           
 
