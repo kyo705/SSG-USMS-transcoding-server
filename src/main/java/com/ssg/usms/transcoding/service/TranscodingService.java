@@ -71,10 +71,12 @@ public class TranscodingService {
 
             transcodingRepository.saveFiles(directory, transcodedFileDirectory);
 
+            Thread.sleep(2000);
+
             FileUtils.delete(originFile);
             FileUtils.deleteDirectory(Paths.get(streamKey).toFile());
 
-        } catch (IOException e) {
+        } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
         }
     }
