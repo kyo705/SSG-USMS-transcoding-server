@@ -1,0 +1,3 @@
+[submodule "SSG-USMS-transcoding-server-yml"]
+	path = SSG-USMS-transcoding-server-yml
+	url = https://github.com/kyo705/SSG-USMS-transcoding-server-yml.git
