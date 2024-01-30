@@ -40,7 +40,7 @@ tasks.named('test') {
 
 task copyPrivate(type: Copy) {
 	copy {
-		from './SSG-USMS-business-service-yml'
+		from './SSG-USMS-transcoding-server-yml'
 		include "application.yml"
 		into 'src/main/resources'
 	}
