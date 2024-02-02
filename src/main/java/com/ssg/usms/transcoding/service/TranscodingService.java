@@ -57,7 +57,7 @@ public class TranscodingService {
                     .setStartOffset(0, TimeUnit.MILLISECONDS) // Use null to start immediately
                     .addExtraArgs("-c:v", "h264")
                     .addExtraArgs("-c:a", "aac")
-                    .addExtraArgs("-hls_time", "10") // Set segment duration
+                    .addExtraArgs("-hls_time", "20") // Set segment duration
                     .addExtraArgs("-hls_segment_type", "mpegts") // Set segment type
                     .addExtraArgs("-hls_list_size", "0") // Keep all segments in playlist
                     .addExtraArgs("-hls_segment_filename", Paths.get(directory,originFileKey.split("[.]")[0] + "-%03d.ts").toString()) // Segment filename pattern
